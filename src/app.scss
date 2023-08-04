@@ -1,0 +1,24 @@
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: lightcoral;
+    position: fixed;
+    top: 70px;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; //for other browsers like : fixefox
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      z-index: 2;
+      scroll-snap-align: start;
+    }
+  }
+}

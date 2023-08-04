@@ -1,0 +1,7 @@
+export {default as Contact} from './contact'
+export {default as Works} from './works'
+export {default as Testimonials} from './testimonials'
+export {default as Sidebar} from './sidebar'
+export {default as Portfolio} from './portfolio'
+export {default as Topbar} from './topbar'
+export {default as Introduction} from './introduction'

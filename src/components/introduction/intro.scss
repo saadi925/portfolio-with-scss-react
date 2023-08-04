@@ -1,0 +1,78 @@
+@import "../../index.scss";
+.intro {
+  background: #fff;
+  display: flex;
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+    .imgContainer {
+      margin-top: 3px;
+      width: 800px;
+      height: 800px;
+      background: transparent;
+      border: 2px solid $hoverColor;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: right;
+
+      &:hover {
+        border: 2px solid #00000000;
+      }
+      img {
+        height: 90%;
+        width: 90%;
+        border-radius: 50%;
+        border: 2px solid;
+        transition: 1s all ease-in;
+
+        background-size: cover;
+        &:hover {
+          border: 2px solid $hoverColor;
+        }
+      }
+    }
+  }
+  .right {
+    position: relative;
+    flex: 1;
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+      }
+      h2 {
+        font-size: 35px;
+      }
+      h3 {
+        font-size: 30px;
+        span {
+          color: crimson;
+          font-size: inherit;
+          margin-left: 5px;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      color: $mainColor;
+      left: 30%;
+      animation: blinkArrow 2s infinite;
+      @keyframes blinkArrow {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

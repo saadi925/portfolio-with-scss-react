@@ -1,0 +1,126 @@
+.works {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    height: 550px;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.5s ease;
+
+      .item {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 20px;
+        width: 900px;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .left {
+          flex: 4;
+
+          @media (max-width: 768px) {
+            width: 100%;
+            order: 2;
+          }
+
+          .leftContainer {
+            padding: 2rem;
+
+            .iconContainer {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 80px;
+              height: 80px;
+              background-color: #eaeaea;
+              border-radius: 50%;
+              margin-bottom: 1rem;
+
+              // Add any additional styles for the icon container
+            }
+
+            h2 {
+              font-size: 1.5rem;
+              margin-bottom: 0.5rem;
+              color: #333;
+
+              // Add any additional styles for the title
+            }
+
+            p {
+              color: #777;
+
+              // Add any additional styles for the paragraph
+            }
+          }
+        }
+
+        .right {
+          flex: 8;
+          overflow: hidden;
+
+          @media (max-width: 768px) {
+            width: 100%;
+            order: 1;
+            margin-bottom: 2rem;
+          }
+
+          img {
+            padding-right: 2px;
+            float: right;
+            width: 90%;
+            transform: rotate(-12deg);
+            border-radius: 8px;
+            object-fit: cover;
+            background-size: cover;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            // Add any additional styles for the image
+          }
+        }
+      }
+    }
+  }
+
+  .arrow-left,
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 3;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #777;
+    }
+  }
+
+  .arrow-left {
+    left: 1rem;
+  }
+
+  .arrow-right {
+    right: 1rem;
+  }
+}
